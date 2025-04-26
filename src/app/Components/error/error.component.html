@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Page Not Found</title>
+    <!-- Bootstrap CSS -->
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .error-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .error-code {
+        font-size: 8rem;
+        font-weight: bold;
+        color: #dc3545;
+      }
+      .error-message {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-message">Page Not Found</h1>
+      <p class="lead mb-4">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <a routerLinkActive="active" routerLink="/" class="btn btn-primary btn-lg"
+        >Go Back Home</a
+      >
+    </div>
+  </body>
+</html>

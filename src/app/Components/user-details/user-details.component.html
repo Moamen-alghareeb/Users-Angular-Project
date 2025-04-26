@@ -1,0 +1,24 @@
+<div>
+  <div class="card border-success mx-auto w-50 m-5">
+    <div class="card-header fs-2 bg-success-subtle">{{ UserDetails.name }}</div>
+    <div class="card-body rounded-bottom text-bg-light">
+      <h5 class="card-title"></h5>
+      <h4 class="card-text">username: {{ UserDetails.username }}</h4>
+      <div class="card-text ms-5"></div>
+      <p>
+        <strong class="fs-4">address :</strong>
+        {{ UserDetails.address.suite }} , {{ UserDetails.address.street }} ,
+        {{ UserDetails.address.city }}
+      </p>
+      <h4 class="card-text">
+        Phone: {{ UserDetails.phone }}
+        <a
+          href="https://{{ UserDetails.website }}"
+          target="_blank"
+          class="card-text btn btn-outline-dark position-absolute me-3 end-0"
+          >WebSite</a
+        >
+      </h4>
+    </div>
+  </div>
+</div>
