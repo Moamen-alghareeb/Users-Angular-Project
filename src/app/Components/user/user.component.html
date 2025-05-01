@@ -37,7 +37,7 @@
       type="button"
       class="btn btn-outline-success"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      [attr.data-bs-target]="'#editModal-' + User.id"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      [id]="'editModal-' + User.id"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -62,7 +62,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Edit {{ User.name }} Data
+            </h1>
             <button
               type="button"
               class="btn-close"

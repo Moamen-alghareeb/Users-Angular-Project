@@ -1,5 +1,6 @@
 @for (user of AllUsers; track $index) {
 <app-user
+  #$index
   [User]="user"
   (deleteUser)="onDelete($event)"
   (editUser)="OnUpdate($event)"

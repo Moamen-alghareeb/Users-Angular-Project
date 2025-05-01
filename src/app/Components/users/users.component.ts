@@ -47,11 +47,12 @@ export class UsersComponent {
     }
   }
   OnUpdate(UserData: any) {
+    console.log(UserData);
     this.userService.updateUser(UserData.id, { ...UserData }).subscribe({
       next: () => {
         console.log('User Updated successfully');
         this.loadUsers();
-        this.reloadComponent();
+        // this.reloadComponent();
       },
     });
   }

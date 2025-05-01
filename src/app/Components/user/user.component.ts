@@ -37,7 +37,10 @@ export class UserComponent {
     this.deleteUser.emit(this.User.id);
   }
   edit() {
-    if (this.MyFormData.valid)
-      this.editUser.emit({ id: this.User.id, ...this.MyFormData.value });
+    if (this.MyFormData.valid) {
+      console.log(this.User.id);
+      const UpdatedUser = { id: this.User.id, ...this.MyFormData.value };
+      this.editUser.emit(UpdatedUser);
+    }
   }
 }
